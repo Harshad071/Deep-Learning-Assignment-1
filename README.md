@@ -37,24 +37,37 @@ The neural network has the following architecture:
 
 ## Training Results
 
-### Loss during training
-The loss was minimized over 14,000 epochs using the Mean Squared Error (MSE) as the loss function. Example training log:
-Epoch 0 - Loss: 0.2656253844377818 Epoch 1000 - Loss: 0.25052722352922147 Epoch 2000 - Loss: 0.2504432418426345 Epoch 3000 - Loss: 0.2503755345024164 Epoch 4000 - Loss: 0.2503195105633955 Epoch 5000 - Loss: 0.2502726087280806 Epoch 6000 - Loss: 0.25023291486231 Epoch 7000 - Loss: 0.25019897699868454 Epoch 8000 - Loss: 0.25016967854138145 Epoch 9000 - Loss: 0.250144149816591 Epoch 10000 - Loss: 0.2501217053593956 Epoch 11000 - Loss: 0.2501017987750972 Epoch 12000 - Loss: 0.25008398979392515 Epoch 13000 - Loss: 0.25006791991038824 Epoch 14000 - Loss: 0.25005329414835653
+### Loss during Training
+The loss was minimized over **14,000 epochs** using the **Mean Squared Error (MSE)** as the loss function. Below is a sample of the training log:
 
-rust
-Copy
-Edit
-
-### Predictions after training
-The model's predictions for the AND operation are as follows:
-[[0.50140679] [0.48687625] [0.51232741] [0.49762452]]
-
-yaml
-Copy
-Edit
-The values are close to the expected results of the AND operation: [0, 0, 0, 1].
+- **Epoch 0** - Loss: `0.2656253844377818`
+- **Epoch 1,000** - Loss: `0.25052722352922147`
+- **Epoch 2,000** - Loss: `0.2504432418426345`
+- **Epoch 3,000** - Loss: `0.2503755345024164`
+- **Epoch 4,000** - Loss: `0.2503195105633955`
+- **Epoch 5,000** - Loss: `0.2502726087280806`
+- **Epoch 6,000** - Loss: `0.25023291486231`
+- **Epoch 7,000** - Loss: `0.25019897699868454`
+- **Epoch 8,000** - Loss: `0.25016967854138145`
+- **Epoch 9,000** - Loss: `0.250144149816591`
+- **Epoch 10,000** - Loss: `0.2501217053593956`
+- **Epoch 11,000** - Loss: `0.2501017987750972`
+- **Epoch 12,000** - Loss: `0.25008398979392515`
+- **Epoch 13,000** - Loss: `0.25006791991038824`
+- **Epoch 14,000** - Loss: `0.25005329414835653`
 
 ---
+
+### Predictions after Training
+The model's predictions for the **AND operation** are as follows:
+
+- `[0, 0]` -> `0.50140679`
+- `[0, 1]` -> `0.48687625`
+- `[1, 0]` -> `0.51232741`
+- `[1, 1]` -> `0.49762452`
+
+These values are close to the expected results of the AND operation: `[0, 0, 0, 1]`.
+
 
 ## Usage
 
@@ -78,28 +91,3 @@ To run the code:
 
 ---
 
-## Customization
-
-You can modify the following parameters in the `NeuralNetwork` class:
-- **Number of neurons in the hidden layer** (`hidden_size`)
-- **Learning rate** (`learning_rate`)
-- **Number of training epochs** (`epochs`)
-- **Custom weights and biases initialization**
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests for improvements or new features!
-
----
-
-## Acknowledgments
-
-This implementation is designed as an educational example to help understand the working of neural networks from scratch
